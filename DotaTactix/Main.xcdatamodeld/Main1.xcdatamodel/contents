@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ItemBuildEntity" representedClassName=".ItemBuildEntity" isAbstract="YES" syncable="YES">
+        <attribute name="coreItems" attributeType="Transformable"/>
+        <attribute name="earlyGame" attributeType="Transformable"/>
+        <attribute name="luxuryItems" attributeType="Transformable"/>
+        <attribute name="situationalItems" attributeType="Transformable"/>
+        <attribute name="startingItems" attributeType="Transformable"/>
+    </entity>
+    <entity name="StrategyEntity" representedClassName=".StrategyEntity" isAbstract="YES" syncable="YES">
+        <attribute name="earlyGame" attributeType="String"/>
+        <attribute name="lateGame" attributeType="String"/>
+        <attribute name="midGame" attributeType="String"/>
+    </entity>
+    <entity name="TacticsEntity" representedClassName=".TacticsEntity" isAbstract="YES" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="heroIcon" optional="YES" attributeType="String"/>
+        <attribute name="heroName" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="itemBuild" maxCount="1" deletionRule="Nullify" destinationEntity="ItemBuildEntity"/>
+        <relationship name="strategy" maxCount="1" deletionRule="Nullify" destinationEntity="StrategyEntity"/>
+    </entity>
+</model>
