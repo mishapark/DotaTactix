@@ -1,6 +1,11 @@
 <p align="center">
     <img src="Media/launch.png" alt="drawing" width="400"/>
 </p>
+<p align="center">
+    <a href="https://apps.apple.com/us/app/dotatactix/id6474991131">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="drawing" width="200"/>
+    </a>
+</p>
 
 # DotaTactix - AI-powered build & strategy generator
 
