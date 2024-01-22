@@ -10,6 +10,7 @@ import Foundation
 // swiftlint:disable all
 
 struct AbilityData: Codable {
+  var name: String?
   let dname: String?
   let attrib: [Attrib]?
   let img: String?

@@ -40,7 +40,6 @@ struct DotaTactixView: View {
                   .frame(height: 35)
                 Spacer()
               }
-
             }
             .padding(.horizontal)
             ScrollView {

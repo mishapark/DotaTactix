@@ -22,7 +22,7 @@ struct ItemSheet: View {
           Spacer()
           VStack(spacing: 10) {
             HStack(alignment: .top) {
-              LazyImage(url: URL(string: "https://api.opendota.com\(item.img)")) { state in
+              LazyImage(url: URL(string: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/\(item.name ?? "").png")) { state in
                 if state.error != nil {
                   EmptyView()
                 } else if let image = state.image {

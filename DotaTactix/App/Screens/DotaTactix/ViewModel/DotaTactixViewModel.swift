@@ -83,7 +83,7 @@ class DotaTactixViewModel {
   func convertItemsIntoImages(items: [String]) -> [String] {
     return items.compactMap { itemString in
       if let itemObject = self.items.first(where: { $0.dname == itemString }) {
-        return itemObject.img
+        return itemObject.name
       }
       return nil
     }

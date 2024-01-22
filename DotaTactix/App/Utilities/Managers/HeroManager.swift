@@ -85,6 +85,7 @@ class HeroManager: ObservableObject {
     for (id, ability) in abilityDictionary {
       if let id = Int(id) {
         result[id] = abilities[ability]
+        result[id]?.name = ability
       }
     }
 

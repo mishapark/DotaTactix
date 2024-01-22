@@ -8,6 +8,7 @@
 import Foundation
 
 struct Item: Codable, Identifiable {
+  var name: String?
   let hint: [String]?
   let id: Int
   let img: String

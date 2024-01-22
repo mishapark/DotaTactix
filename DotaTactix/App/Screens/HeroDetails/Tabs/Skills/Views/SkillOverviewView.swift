@@ -16,7 +16,7 @@ struct SkillOverviewView: View {
 
   var body: some View {
     HStack(alignment: .top, spacing: 15) {
-      LazyImage(url: URL(string: "https://api.opendota.com\(skill.ability.img ?? "")")) { state in
+      LazyImage(url: URL(string: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/\(skill.ability.name ?? "").png")) { state in
         if (state.error) != nil {
           EmptyView()
         } else if let image = state.image {

@@ -20,22 +20,34 @@ class ItemManager: ObservableObject {
       url: OpenDotaEndpoints.items.rawValue
     )
 
-    self.items = Array(items.values)
-    sortedItems = filterSortItems(items: items)
+    let itemArray: [Item] = items.map { key, item in
+      var newItem = item
+      newItem.name = key
+      return newItem
+    }
+
+    self.items = itemArray
+    sortedItems = filterSortItems(items: itemArray)
   }
 
   func refreshItems() async throws {
     let itemsData = try await NetworkManager.shared.fetchFromURL(OpenDotaEndpoints.items.rawValue)
     let items = try JSONDecoder().decode([String: Item].self, from: itemsData)
 
-    self.items = Array(items.values)
-    sortedItems = filterSortItems(items: items)
+    let itemArray: [Item] = items.map { key, item in
+      var newItem = item
+      newItem.name = key
+      return newItem
+    }
+
+    self.items = itemArray
+    sortedItems = filterSortItems(items: itemArray)
   }
 
   // MARK: - Private methods
 
-  private func filterSortItems(items: [String: Item]) -> [(String, [Item])] {
-    let filteredItems = filterItems(items: Array(items.values))
+  private func filterSortItems(items: [Item]) -> [(String, [Item])] {
+    let filteredItems = filterItems(items: items)
     let sortedItems = sortItems(items: filteredItems)
     let sortedByQualityItems = sortItemsByQuality(items: sortedItems)
 

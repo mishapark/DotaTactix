@@ -59,8 +59,8 @@ struct Hero: Identifiable, Hashable {
     name = hero.name
     shortName = hero.shortName
     displayName = hero.displayName ?? ""
-    image = "https://api.opendota.com/apps/dota2/images/dota_react/heroes/\(shortName).png?"
-    icon = "https://api.opendota.com/apps/dota2/images/dota_react/heroes/icons/\(shortName).png?"
+    image = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/\(shortName).png"
+    icon = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/icons/\(shortName).png"
     verticalImage = "https://cdn.dota2.com/apps/dota2/images/heroes/\(shortName)_vert.jpg"
     bio = hero.language?.bio ?? ""
     shortBio = hero.language?.hype ?? ""

@@ -23,7 +23,7 @@ struct ItemsBuildView: View {
       VStack {
         HStack(spacing: 3) {
           ForEach(viewModel.convertItemsIntoImages(items: items), id: \.self) { itemImg in
-            LazyImage(url: URL(string: "https://api.opendota.com\(itemImg)")) { state in
+            LazyImage(url: URL(string: "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/\(itemImg).png")) { state in
               if (state.error) != nil {
                 EmptyView()
               } else if let image = state.image {
