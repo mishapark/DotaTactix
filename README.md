@@ -1,6 +1,11 @@
 <p align="center">
     <img src="Media/launch.png" alt="drawing" width="400"/>
 </p>
+<p align="center">
+    <a href="https://apps.apple.com/us/app/dotatactix/id6474991131">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="drawing" width="200"/>
+    </a>
+</p>
 
 # DotaTactix - AI-powered build & strategy generator
 
@@ -43,47 +48,35 @@ To run this project, you will need to create `OpenAI-Info.plist` wtih the variab
 - **XCode 15 & iOS17**
 - **MVVM**
     - Implemented MVVM architecture with API work done in a Service
-- **Dark/Light Mode**
-    - Saved to UserDefaults
-- **Portrait/Landscape Modes**
-    - Modified views based on SizeClass to make app look good in both orientations
+- **Core Data**
+    - Saving all AI-generated tactics using Core Data and displaying them in a list
+- **Combine**
+    - Fetching data, notifying ViewModels, and updating the data using Combine
+- **File Manager**
+    - Fetching data from APIs and storing JSON files in the document directory
+    - Retrieve data from the saved files if they exist
 - **Custom App Icon**
 - **Custom Display Name**
 - **Swift Modern Concurrency** - async/await, URLSession
 - **Error Handling**
-    - Throwing custom errors during API call and displaying them in UI
+    - Throwing custom errors during API calls and displaying them in UI
 - **Animations**
     - Done with `withAnimation`
 - **Animated Splash Screen**
-- **Onboarding Screen**
-    - Consists of 3 screens created with TabView
-    - Only appears when app is launched for the first time
-- **TabView** - Home, Search, Cart, Profile
-    - Custom animated TabView with 4 tabs
-- **List of Products** - ScrollView, Grids, For loops
-    - Used V/HGrids, V/HLists and Foreach loops to display data
-- **Sort List by Brands**
-    - Brands displayed on Home Screen are hard coded due to the API that does not offer brand icons
-    - Clicking on a brand makes an API call to display brand products
-    - Clicking one more time deselects the brand and fetches random brands products
-- **Product Details** - Images, Price, Sizes, Description
-    - User can select quantity and size of the product
-    - Minimum quantity is 1 and Max is 99
-    - Product can only be added to the cart when size is selected
-    - After adding a product user can navigate to cart or continue shopping
-    - Note: Product description has HTML tags as it is returned from the API as a String
-- **Search Brands**
-    - User can search by brand name and tapping on a brand name will show products from that brand
-- **Adding Products to Cart**
-    - Cart items are saved between app sessions
-    - If user adds the same product but with different size, cart will display both products
-- **Cart Total Amount** - Subtotal, Tax, Shipping, Promo Code
-    - Promo Code is hard coded - `TRENDIFY10`, applies 10% off of Subtotal
-- **Favorite Products**
-    - User can mark products as Favorites and they will be saved between app sessions
-- **Profile Picutre**
-    - User can set Profile Picture from gallery and it will be save between app sessions
-- **Saving to UserDefaults** - Favorites, Cart Items, Dark/Light Mode, Profile Picture
+- **TabView** - Home, News/Updates, Glossary
+    - Custom animated TabView with 3 tabs
+- **Tactix Generator**
+    - Created a form with autocomplete and validation
+    - Sending requests to OpenAI and retrieving JSON
+    - Storing all generated tactics in Core Data
+- **News/Updates**
+    - Retrieving news data from an API
+    - Implemented WKWebView with controls to show the latest game updates
+- **Glossary**
+    - Fetching data from 2 different APIs and combining it into one source of data
+    - Implemented sorting, filtering, and grouping of items
+    - Added Details page for each hero
+
 
 ## API Reference
 
